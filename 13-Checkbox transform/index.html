@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch</title>
+    <style>
+        :root {
+            --divSize: 200px;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input {
+            width: 25px;
+            height: 25px;
+            margin-right: 15px;
+        }
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid black;
+            width: var(--divSize);
+            height: var(--divSize);
+            transition: 1s;
+        }
+
+        #size:checked~div {
+            width: calc(var(--divSize)*2);
+            height: calc(var(--divSize)*2);
+        }
+
+        #rotate:checked~div {
+            transform: translate(-50%, -50%) rotate(45deg)
+        }
+
+        #color:checked~div {
+            background-color: #000;
+        }
+
+        #glow:checked~div {
+            box-shadow: 0 0 46px 2px red;
+        }
+
+        #size:checked~#glow:checked~div {
+            box-shadow: 0 0 92px 20px yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="size">2 x większy</label>
+    <input type="checkbox" id="size">
+
+    <label for="rotate">Obrót 45 deg</label>
+    <input type="checkbox" id="rotate">
+
+    <label for="color">Kolor</label>
+    <input type="checkbox" id="color">
+
+    <label for="glow">Światło</label>
+    <input type="checkbox" id="glow">
+    <div></div>
+
+
+</body>
+
+</html>
