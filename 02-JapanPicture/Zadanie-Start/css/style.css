@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.picture {
+    position: relative;
+    margin: 10vh auto;
+    width: 80vw;
+    height: calc((80vw/16)*9);
+    background-color: rgb(150, 151, 151);
+    overflow: hidden;
+}
+
+img[src="img/japan1.png"] {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    left: 0;
+}
+
+img[src="img/japan2.png"] {
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    left: 0;
+}
+
+img[src="img/japan3.png"] {
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    left: 0;
+}
+
+img[src="img/japan4.png"] {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    left: 0;
+}
+
+img[src="img/japan5.png"] {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 0;
+}
+
+img[src="img/japan6.png"] {
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    left: 0;
+}
+
+img[src="img/japan7.png"] {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 8%;
+}
+
+img[src="img/japan8.png"] {
+    position: absolute;
+    top: 9%;
+    left: -8%;
+    width: 32%;
+}
+
+img[src="img/japan9.png"] {
+    position: absolute;
+    top: 9%;
+    right: 0;
+    width: 40%;
+}
+
+img[src="img/japan10.png"] {
+    position: absolute;
+    top: 22%;
+    right: 0;
+    width: 30%;
+}
+
+img[src="img/japan11.png"] {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    width: 5%;
+}
