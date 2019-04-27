@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domek</title>
+    <style>
+        span {
+            position: absolute;
+            top: 5vh;
+            left: 5vh;
+            display: block;
+            width: 150px;
+            line-height: 40px;
+            color: #fff;
+            font-family: arial;
+            background-color: #811a1a;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        div {
+            position: absolute;
+            top: 100vh;
+            left: 0;
+            width: 0;
+            height: 0;
+            transition: 1s
+        }
+
+        div:nth-of-type(1) {
+            transition-delay: 1.2s;
+        }
+
+        div:nth-of-type(2) {
+            transition-delay: .2s;
+        }
+
+
+        div:nth-of-type(4) {
+            transition-delay: .4s;
+        }
+
+        div:nth-of-type(5) {
+            transition-delay: .6s;
+        }
+
+        div:nth-of-type(6) {
+            transition-delay: 1s;
+        }
+
+        span:hover~div:nth-of-type(1) {
+            /* komin */
+            position: absolute;
+            top: calc(50% - 22vw);
+            left: calc(50% + 7vw);
+            width: 5vw;
+            height: 10vw;
+            background-color: #333;
+        }
+
+        span:hover~div:nth-of-type(2) {
+            /* dach */
+            position: absolute;
+            top: calc(50% - 10vw);
+            left: 50%;
+            width: calc(30vw/1.41);
+            /*przekątna kwadratu */
+            height: calc(30vw/1.41);
+            transform: translate(-50%, -50%) rotate(45deg);
+            background-color: #000;
+
+        }
+
+        span:hover~div:nth-of-type(3) {
+            /* bryła domu */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30vw;
+            height: 20vw;
+            transform: translate(-50%, -50%);
+            background-color: #611919;
+        }
+
+        span:hover~div:nth-of-type(4) {
+            /* lewe okno*/
+            position: absolute;
+            top: calc(50% - 4vw);
+            left: calc(50% - 9vw);
+            width: 6vw;
+            height: 5vw;
+            transform: translate(-50%, -50%);
+            background-color: #ff0;
+        }
+
+        span:hover~div:nth-of-type(5) {
+            /* prawe okno */
+            position: absolute;
+            top: calc(50% - 4vw);
+            left: calc(50% + 8vw);
+            width: 8vw;
+            height: 5vw;
+            transform: translate(-50%, -50%);
+            background-color: #ff0;
+        }
+
+        span:hover~div:nth-of-type(6) {
+            /* drzwi */
+            position: absolute;
+            top: calc(50% + 6vw);
+            left: calc(50%);
+            width: 5vw;
+            height: 8vw;
+            transform: translate(-50%, -50%);
+            background-color: #333;
+        }
+    </style>
+
+</head>
+
+<body>
+    <span>BUDUJEMY</span>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
