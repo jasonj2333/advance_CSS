@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery buttons</title>
+    <style>
+        button {
+            font-size: 40px;
+            transition: .2s;
+        }
+
+        h1 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-family: arial;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+            transition: 1s;
+            border: 0 solid black;
+        }
+
+        .on {
+            background-color: #f00;
+            color: #fff;
+        }
+
+
+        h1.big {
+            font-size: 160px;
+        }
+
+        h1.small {
+            font-size: 40px;
+        }
+
+        h1.frame {
+            border: 20px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button class="larger">2xWiększy</button>
+    <button class="smaller">2xMniejszy</button>
+    <button class="border">Obramowanie</button>
+    <h1>Nazwa</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $('button').click(function () {
+            $(this).toggleClass('on');
+        })
+
+        $('.larger').click(function () {
+            $('h1').toggleClass('big').removeClass('small');
+            $('.smaller').removeClass('on');
+        })
+
+        $('.smaller').click(function () {
+            $('h1').toggleClass('small').removeClass('big');
+            $('.larger').removeClass('on');
+        })
+
+        $('.border').click(function () {
+            $('h1').toggleClass('frame');
+        })
+    </script>
+</body>
+
+</html>
